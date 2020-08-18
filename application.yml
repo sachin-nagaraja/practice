@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: case-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_xDS2ZzMwe/.well-known/jwks.json
+  data:
+    mongodb:
+      uri: mongodb+srv://mongoAdmin:aoKdtKPB9qiLNKBP@cluster0-9b5et.mongodb.net/test
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+  refresh:
+    enable: false
+  instance:
+    hostname: localhost
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+logging:
+  level:
+    root: DEBUG
