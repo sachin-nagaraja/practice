@@ -9,9 +9,7 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_xDS2ZzMwe/.well-known/jwks.json
-  data:
-    mongodb:
-      uri: mongodb+srv://mongoAdmin:aoKdtKPB9qiLNKBP@cluster0-9b5et.mongodb.net/test
+ 
     
 eureka:
   client:
@@ -29,6 +27,4 @@ management:
       exposure:
         include: "*"
 
-logging:
-  level:
-    root: DEBUG
+
